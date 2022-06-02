@@ -1,0 +1,45 @@
+﻿<Window x:Class="OOP_EinkauflistenVerwaltung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_EinkauflistenVerwaltung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <GroupBox Header="List" Canvas.Top="50" Canvas.Left="20" Width="400" Height="300">
+            <Canvas>
+                <ListView x:Name ="myList" Canvas.Top="20" Canvas.Left="20" Height="200" Width="360"></ListView>
+                <Button Width="110" Canvas.Top="243" Canvas.Left="20" Click="Button_Click_2">Delete Selected</Button>
+                <Button Width="110" Canvas.Left="270" Canvas.Top="243" Click="Button_Click">Sort by name</Button>
+                <Button Width="110" Canvas.Left="147" Canvas.Top="243" Click="Button_Click_1">Price:</Button>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="New Item" Canvas.Top="50" Canvas.Left="450" Width="250" Height="250">
+            <Canvas>
+                <Canvas Canvas.Top="20" Canvas.Left="10">
+                    <Label>Name:</Label>
+                    <TextBox x:Name="lbl_Name" Width="100" Height="20" Canvas.Left="100"></TextBox>
+                </Canvas>
+                <Canvas Canvas.Top="50" Canvas.Left="10">
+                    <Label>Price:</Label>
+                    <TextBox x:Name="lbl_Price" Width="100" Height="20" Canvas.Left="100"></TextBox>
+                </Canvas>
+                <Canvas Canvas.Top="80" Canvas.Left="10">
+                    <Label>Quantity:</Label>
+                    <TextBox x:Name="lbl_Quantity" Width="100" Height="20" Canvas.Left="100"></TextBox>
+                </Canvas>
+                <Canvas Canvas.Top="110" Canvas.Left="10">
+                    <Label>Addtional Info:</Label>
+                    <TextBox x:Name="lbl_AdditionalInfo" Width="100" Height="20" Canvas.Left="100"></TextBox>
+                </Canvas>
+                <Canvas>
+                    <Button Click="BtnClickDelete" Width="100" Height="20" Canvas.Top="160" Canvas.Left="10">Cancel</Button>
+                    <Button Click="BtnClickOK" Width="100" Height="20" Canvas.Top="160" Canvas.Left="120">OK</Button>
+                </Canvas>
+            </Canvas>
+        </GroupBox>
+        <Label Content="Price:" Canvas.Left="454" Canvas.Top="327"/>
+        <Label x:Name="pricess" Width="292" Content=" " Canvas.Left="500" Canvas.Top="326" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    </Canvas>
+</Window>
